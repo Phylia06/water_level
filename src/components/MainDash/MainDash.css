@@ -1,10 +1,17 @@
 .MainDash{
-    /* padding-top: 1rem; */
+    padding-top: -5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    width: 80%;
+    
+}
+.MainDash2{
+    margin-top: -30px;
 }
 
+.MainDash3{
+    flex-direction: row;
+}
 @media screen and (max-width: 1200px) {
     .MainDash{
         justify-content:flex-start;

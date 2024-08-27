@@ -9,111 +9,198 @@ import {
 
 // Analytics Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-
-// Recent Card Imports
-import img1 from "../imgs/img1.png";
-import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
-
 // Sidebar Data
+
 export const SidebarData = [
   {
     icon: UilEstate,
-    heading: "Dashboard",
-  },
-  {
-    icon: UilClipboardAlt,
-    heading: "Orders",
+    heading: "Home",
+    path: "/Landing", 
   },
   {
     icon: UilUsersAlt,
-    heading: "Customers",
+    heading: "Alerts",
+    path: "/Alert", 
   },
   {
     icon: UilPackage,
-    heading: 'Products'
+    heading: 'Reports',
+    path: "/Report", 
   },
   {
     icon: UilChart,
-    heading: 'Analytics'
-  },
-  {
-    icon: UilSignOutAlt,
-    heading: 'Analytics'
+    heading: 'Analytics',
+    path: "/Analytics", 
   },
 ];
+
+// Analytics RT data
+export const Ph = [
+  {
+    name: "Water",
+    data: [8, 2, 4, 6],
+  },
+
+  {
+    name: "Chlorine",
+    data: [10, 8, 8, 3],
+  },
+];
+export const orp = [
+  {
+    name: "Water",
+    data: [8, 2, 4, 6],
+  },
+
+  {
+    name: "Chlorine",
+    data: [10, 8, 8, 3],
+  },
+];
+export const Solubility = [
+  {
+    name: "Water",
+    data: [8, 2, 4, 6],
+  },
+
+  {
+    name: "Chlorine",
+    data: [10, 8, 8, 3],
+  },
+];
+export const Turbity = [
+  {
+    name: "Water",
+    data: [8, 2, 4, 6],
+  },
+
+  {
+    name: "Chlorine",
+    data: [10, 8, 8, 3],
+  },
+];
+export const tmp = [
+  {
+    name: "Water",
+    data: [8, 2, 4, 6],
+  },
+
+  {
+    name: "Chlorine",
+    data: [10, 8, 8, 3],
+  },
+];
+
+export const options = {
+  chart:  {
+    type: 'area',
+    height:300,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  xaxis: {
+    type: "datetime",
+    categories: [
+      "2024-10-19T00:00:00.000Z",
+      "2024-10-19T01:30:00.000Z",
+      "2024-10-19T02:30:00.000Z",
+      "2024-10-19T03:30:00.000Z",
+      "2024-10-19T04:30:00.000Z",
+      "2024-10-19T05:30:00.000Z",
+      "2024-10-19T06:30:00.000Z",
+    ],
+  },
+  yaxis: {
+    title: {
+      text: 'PH',
+    },
+  },
+
+};
+
 
 // Analytics Cards Data
 export const cardsData = [
   {
-    title: "Sales",
+    title: "Ph",
     color: {
-      backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-      boxShadow: "0px 10px 20px 0px #e0c6f5",
+      backGround: "linear-gradient(180deg, #72b2e4 0%, #92e1e2 100%)",
+      boxShadow: "0px 10px 20px 0px #a0d2eb",
     },
-    barValue: 70,
-    value: "25,970",
+   
+    barValue: Ph.map(item => 10*(item.data[0])),
     png: UilUsdSquare,
     series: [
       {
-        name: "Sales",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        name: "Ph",
+        data: [10, 100, 50, 70, 80, 30, 40 ],
       },
     ],
   },
   {
-    title: "Revenue",
+    title: "ORP",
     color: {
-      backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-      boxShadow: "0px 10px 20px 0px #FDC0C7",
+      backGround: "linear-gradient(180deg, #00f4fd, #72b2e4 100%)",
+      boxShadow: "0px 10px 20px 0px #a0d2eb",
     },
-    barValue: 80,
-    value: "14,270",
+    barValue: orp.map(item => 10*(item.data[0])),
     png: UilMoneyWithdrawal,
     series: [
       {
-        name: "Revenue",
+        name: "ORP",
         data: [10, 100, 50, 70, 80, 30, 40],
       },
     ],
   },
   {
-    title: "Expenses",
+    title: "Solubility",
     color: {
-      backGround:
-        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-      boxShadow: "0px 10px 20px 0px #F9D59B",
+      backGround: "linear-gradient(180deg, #a1c4fd 0%, #c2e9fb 100%)",
+      boxShadow: "0px 10px 20px 0px #a0d2eb",
     },
-    barValue: 60,
-    value: "4,270",
-    png: UilClipboardAlt,
+    barValue: Solubility.map(item => 10*(item.data[0])),
+    png: UilMoneyWithdrawal,
     series: [
       {
-        name: "Expenses",
-        data: [10, 25, 15, 30, 12, 15, 20],
+        name: "Solubility",
+        data: [],
       },
     ],
   },
-];
-
-// Recent Update Card Data
-export const UpdatesData = [
   {
-    img: img1,
-    name: "Andrew Thomas",
-    noti: "has ordered Apple smart watch 2500mh battery.",
-    time: "25 seconds ago",
+    title: "Turbity ",
+    color: {
+      backGround:
+        "linear-gradient(180deg, #4e65ff 0%, #92effd 100%)",
+      boxShadow: "0px 10px 20px 0px #a0d2eb",
+    },
+    barValue: Turbity.map(item => 10*(item.data[0])),
+    png: UilClipboardAlt,
+    series: [
+      {
+        name: "Turbity",
+        data: [],
+      },
+    ],
   },
   {
-    img: img2,
-    name: "James Bond",
-    noti: "has received Samsung gadget for charging battery.",
-    time: "30 minutes ago",
-  },
-  {
-    img: img3,
-    name: "Iron Man",
-    noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
-    time: "2 hours ago",
+    title: "Temperature ",
+    color: {
+      backGround:
+        "linear-gradient(180deg, #a1c4fd 0%, #08f1d9 100%)",
+      boxShadow: "0px 10px 20px 0px #a0d2eb",
+    },
+    barValue: tmp.map(item => 10*(item.data[0])),
+    png: UilClipboardAlt,
+    series: [
+      {
+        name: "Temperature",
+        data: [],
+      },
+    ],
   },
 ];

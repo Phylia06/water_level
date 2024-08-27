@@ -1,0 +1,4 @@
+.AppGlass{
+    display: flex;
+    flex-direction: row;
+}

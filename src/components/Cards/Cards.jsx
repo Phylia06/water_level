@@ -14,7 +14,7 @@ const Cards = () => {
               title={card.title}
               color={card.color}
               barValue={card.barValue}
-              value={card.value}
+              
               png={card.png}
               series={card.series}
             />

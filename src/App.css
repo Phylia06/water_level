@@ -16,9 +16,9 @@
   color: var(--black);
   background: linear-gradient(
     106.37deg,
-    #ffe1bc 29.63%,
-    #ffcfd1 51.55%,
-    #f3c6f1 90.85%
+    #6fd6ff 29.63%,
+    #26b7cd 51.55%,
+    #d7ede1 90.85%
   );
   height: 100vh;
   display: flex;
@@ -50,3 +50,54 @@
     grid-template-columns: 1fr;
   } 
 }
+
+/*Sdbar*/
+#Sdbar {
+  grid-area: sidebar;
+  height: 100%;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba( 0, 0, 0, .1);
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.Sdbar-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.Sdbar-brand{
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.Sdbar-list{
+  padding: 0;
+  list-style-type: none;
+}
+
+.Sdbar-list-item{
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+.Sdbar-list-item-hover{
+  cursor: pointer;
+}
+
+.Sdbar-list-item > a{
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.Sdbar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
+/* Ending Sdbar*/
